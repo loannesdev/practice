@@ -1,31 +1,35 @@
 import { useSuperState } from '@superstate/react'
-import { PHOTOS, TO_DO } from './superstate'
+import { PHOTOS } from './superstate/Photos'
+import { TO_DO } from './superstate/ToDo'
 
-const { TO_DO_STATE, createToDo, onChangeInput } = TO_DO
-const { PHOTOS_STATE, readPhotos } = PHOTOS
+const { createToDo, onChangeInput, deleteTask, completeTask } = TO_DO
+const { readPhotos } = PHOTOS
 
 export default function App() {
-  useSuperState(TO_DO_STATE, { target: 'now' })
-  useSuperState(PHOTOS_STATE, { target: 'now' })
+  useSuperState(TO_DO.state, { target: 'now' })
+  useSuperState(PHOTOS.state, { target: 'now' })
+  const TODO_S = TO_DO.state.now();
+  const PHOTOS_S = PHOTOS.state.now();
 
   return (
-    <div>
+    <>
       <button onClick={readPhotos}>Leer fotos</button>
-      <span>{TO_DO_STATE.now().TASKS.length} tareas pendientes</span>
+      <span>{TODO_S.TASKS.length} tareas pendientes</span>
 
-      <input type="text" onChange={(evt) => { onChangeInput(evt.target.value) }} value={TO_DO_STATE.now().INPUT_VALUE} />
+      <input type="text" onChange={(evt) => { onChangeInput(evt.target.value) }} value={TODO_S.INPUT_VALUE} />
       <button onClick={() => {
         createToDo()
       }}>Agregar tarea</button>
 
       {
-        TO_DO_STATE?.now()?.TASKS?.length
-          ? TO_DO_STATE.now().TASKS.map(elm =>
+        TODO_S?.TASKS?.length
+          ? TODO_S.TASKS.map(elm =>
             <article key={elm.id}>
               <p>tarea: {elm.task}</p>
-              <span>completada: {elm.completed}</span>
-              <button >Completar</button>
-              <button>Eliminar</button>
+              <span>completada: {elm.completed ? "Si" : "No"}</span><br />
+              {elm.completed ? null : <button onClick={() => completeTask(elm.id)}>Completar</button>}
+              <button onClick={() => deleteTask(elm.id)}>Eliminar</button>
+              <br /><br />
             </article>
           )
           : <h2>Agrega tareas</h2>
@@ -33,11 +37,11 @@ export default function App() {
 
 
       {
-        PHOTOS_STATE?.now()?.length
+        PHOTOS_S?.length
           ? <>
             <h2>USUARIOS</h2>
             {
-              PHOTOS_STATE.now().map(elm =>
+              PHOTOS_S.map(elm =>
                 <article key={elm.id}>
                   <span>Nombre: {elm.name}</span><br />
                   <span>Nombre de usuario: {elm.username}</span><br />
@@ -49,6 +53,6 @@ export default function App() {
           </>
           : null
       }
-    </div>
+    </>
   )
 }
