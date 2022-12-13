@@ -1,0 +1,22 @@
+.card {
+  background-color: #fafafa;
+  border-radius: 6px;
+  text-align: center;
+  overflow: hidden;
+}
+
+@media (prefers-color-scheme: dark) {
+  .card {
+    background-color: #1f1f1f;
+  }
+}
+
+.card>a {
+  display: flex;
+  padding: 8px 16px;
+}
+
+.card>a>h1 {
+  margin: 0;
+  text-transform: uppercase;
+}

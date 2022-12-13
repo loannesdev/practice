@@ -1,0 +1,13 @@
+.navbar {
+  display: flex;
+  border: 1px solid #1f1f1f;
+  flex-wrap: wrap;
+  padding: 10px 15px;
+  gap: 7px;
+  list-style: none;
+  border-radius: 6px;
+}
+
+.navbar>li>a:hover {
+  text-decoration-line: underline;
+}

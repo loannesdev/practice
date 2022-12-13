@@ -1,0 +1,8 @@
+{
+  "url": "https://jsonplaceholder.typicode.com",
+  "posts": "/posts",
+  "photos": "/photos",
+  "users": "/users",
+  "albums": "/albums",
+  "comments": "/comments"
+}
