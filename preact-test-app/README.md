@@ -1,0 +1,1 @@
+## Primera vez utilizando **[Preact](https://preactjs.com/)**, conociendo algunas de sus características y similitudes con React en una app de lista de tareas usando signals

@@ -1,4 +1,4 @@
-# Proyecto en Fresh (de Deno)
+# Proyecto en Fresh (de Deno) mostrando archivos .md (markdown)
 Prueba de un blog hecho con [Fresh](https://fresh.deno.dev/), alternativa a Nextjs.
 
 <br><br>
