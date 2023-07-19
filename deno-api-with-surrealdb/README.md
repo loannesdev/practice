@@ -1,5 +1,5 @@
 ## **Requisitos para ejecutar este proyecto**
-> **Nota: dicha información del sitio web de SurrealDB está en inglés.**
+> **Nota: La información del sitio web de SurrealDB está en inglés.**
 
 - Instalar Deno (por lo menos desde la versión 1.35.0 hacia adelante).
 - Instalar surrealDB `1.0.0-beta.9+20230402` o superior para su respectivo sistema operativo cómo se indica en su [sitio web oficial](https://surrealdb.com/docs/installation).  
@@ -34,7 +34,7 @@ Esta api se realizó con deno en su versión [1.35.0](https://deno.land/manual@v
 | / | PUT | `{ id, name (opcional), launch_date (opcional), price (opcional), creator (opcional), supported_languages (opcional), genres (opcional) }` |
 | / | DELETE | `{ id }` |
 
-**Nota: Para más detalles vea la sección de [datos de prueba](/datos-de-prueba)**
+**Nota: Para más detalles vea la sección de [datos de prueba](#datos-de-prueba)**
 
 <br>
 
