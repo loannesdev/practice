@@ -23,7 +23,7 @@ Esta api se realizó con deno en su versión [1.35.0](https://deno.land/manual@v
 <br>
 
 ## ***End points***
-*Los parámetros enviados deben ser por el body de la petición*.
+*Los parámetros enviados deben ser por el body de la petición cuando estés usando tu cliente http*.
 
 <br>
 
@@ -34,7 +34,7 @@ Esta api se realizó con deno en su versión [1.35.0](https://deno.land/manual@v
 | / | PUT | `{ id, name (opcional), launch_date (opcional), price (opcional), creator (opcional), supported_languages (opcional), genres (opcional) }` |
 | / | DELETE | `{ id }` |
 
-**Nota: Para más detalles vea la sección de [datos de prueba](#datos-de-prueba)**
+**Nota: Para más detalles vea la sección de [datos de prueba](#datos-de-prueba).**
 
 <br>
 
