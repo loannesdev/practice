@@ -1,0 +1,7 @@
+{
+  "imports": {
+    "oak": "https://deno.land/x/oak@v12.6.0/mod.ts",
+    "surrealdb": "https://deno.land/x/surrealdb@v0.8.2/mod.ts",
+    "colors": "https://deno.land/std@0.194.0/fmt/colors.ts"
+  }
+}
